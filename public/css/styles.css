@@ -18,11 +18,14 @@ h1 {
     display:flex;
     align-items: center;
     justify-content: center;
-    animation: alerta 2s;
-    -moz-animation: alerta 2s; /* Firefox */
-    -webkit-animation: alerta 2s; /* Safari and Chrome */
-    -o-animation: alerta 2s; /* Opera */
-    animation-iteration-count: 4;
+    opacity:0;
+    animation: fadein 2s;
+    transition: fadein 2s ease; 
+    -moz-transition: fadein 2s ease;  
+    -webkit-transition: fadein 2s ease-in; 
+    -ms-transition: fadein 2s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
 }
 
 @keyframes fadein {
@@ -31,7 +34,6 @@ h1 {
     }
     to {
         opacity:1;
-        
     }
 }
 @-moz-keyframes fadein { /* Firefox */
@@ -55,40 +57,40 @@ h1 {
         opacity:0;
     }
     to {
-        opacity: 1;
+        opacity:1;
     }
 }
 
-@keyframes alerta {
+@keyframes fadeinButton {
     from {
-        color: #ffb3b3;
+        opacity:0;
     }
     to {
-        color: black;
+        opacity:0.6;
     }
 }
-@-moz-keyframes alerta { /* Firefox */
+@-moz-keyframes fadeinButton { /* Firefox */
     from {
-        color: black;
+        opacity:0;
     }
     to {
-        color: #ffb3b3;
+        opacity:0.6;
     }
 }
-@-webkit-keyframes alerta { /* Safari and Chrome */
+@-webkit-keyframes fadeinButton { /* Safari and Chrome */
     from {
-        color: black;
+        opacity:0;
     }
     to {
-        color: #ffb3b3;
+        opacity:0.6;
     }
 }
-@-o-keyframes alerta { /* Opera */
+@-o-keyframes fadeinButton { /* Opera */
     from {
-        color: red;
+        opacity:0;
     }
     to {
-        color: black;
+        opacity:0.6;
     }
 }
 
@@ -103,11 +105,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: fadein 3s;
-     transition: fadein 3s linear; 
-    -moz-transition: fadein 3s linear;  
-    -webkit-transition: fadein 3s linear; 
-    -ms-transition: fadein 3s linear;     
+     
 }
 
 #Positronica3 {
@@ -122,11 +120,33 @@ html {
     border: none;
     color: white;
     text-align: center;
-    opacity: 0.6;
+    opacity: 0;
     transition: 0.3s;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+    animation: fadeinButton 2s;
+    transition: fadeinButton 2s ease; 
+    -moz-transition: fadeinButton 2s ease;  
+    -webkit-transition: fadeinButton 2s ease-in; 
+    -ms-transition: fadeinButton 2s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.button1 {
+    animation-delay: 2.5s;
+}
+
+.button2 {
+    animation-delay: 3.5s;
+}
+
+.button3 {
+    animation-delay: 4.5s;
+}
+
+.button4 {
+    animation-delay: 5.5s;
 }
 
 .button:hover {
