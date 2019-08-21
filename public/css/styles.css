@@ -18,10 +18,11 @@ h1 {
     display:flex;
     align-items: center;
     justify-content: center;
-    animation: fadein 3s;
-    -moz-animation: fadein 3s; /* Firefox */
-    -webkit-animation: fadein 3s; /* Safari and Chrome */
-    -o-animation: fadein 3s; /* Opera */
+    animation: alerta 2s;
+    -moz-animation: alerta 2s; /* Firefox */
+    -webkit-animation: alerta 2s; /* Safari and Chrome */
+    -o-animation: alerta 2s; /* Opera */
+    animation-iteration-count: 4;
 }
 
 @keyframes fadein {
@@ -30,6 +31,7 @@ h1 {
     }
     to {
         opacity:1;
+        
     }
 }
 @-moz-keyframes fadein { /* Firefox */
@@ -57,18 +59,39 @@ h1 {
     }
 }
 
-
-
-/*
-.st0,
-.st1 {
-    fill:none;
-    stroke:#fff;
-    stroke-width:20;
-    stroke-linecap:round;
-    stroke-linejoin:round;
+@keyframes alerta {
+    from {
+        color: #ffb3b3;
+    }
+    to {
+        color: black;
+    }
 }
-*/
+@-moz-keyframes alerta { /* Firefox */
+    from {
+        color: black;
+    }
+    to {
+        color: #ffb3b3;
+    }
+}
+@-webkit-keyframes alerta { /* Safari and Chrome */
+    from {
+        color: black;
+    }
+    to {
+        color: #ffb3b3;
+    }
+}
+@-o-keyframes alerta { /* Opera */
+    from {
+        color: red;
+    }
+    to {
+        color: black;
+    }
+}
+
 body,
 html {
     position: absolute;
@@ -80,6 +103,11 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: fadein 3s;
+     transition: fadein 3s linear; 
+    -moz-transition: fadein 3s linear;  
+    -webkit-transition: fadein 3s linear; 
+    -ms-transition: fadein 3s linear;     
 }
 
 #Positronica3 {
