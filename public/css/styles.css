@@ -1,25 +1,23 @@
-
+.row {
+    padding: 30px;
+}
 
 @font-face {
-    font-family: myFirstFont;
-    src: url(../fonts/sansation_light.woff);
-    src: url('../fonts/Hero-Regular.woff2') format('woff2'),
-             url('../fonts/Hero-Regular.woff') format('woff'),
-             url('../fonts/Hero-Regular.ttf') format('truetype');
+    font-family: quarca;
+    src: url('../fonts/Quarca-ExtLig.woff2') format('woff2'),
+        url('../fonts/Quarca-ExtLig.woff') format('woff'),
+        url('../fonts/Quarca-ExtLig.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 h1 {
-    font-family: myFirstFont;
+    font-family: quarca;
     height: 90%; 
     width:100%;
     display:flex;
     align-items: center;
     justify-content: center;
-}
-
-h1 {
     animation: fadein 3s;
     -moz-animation: fadein 3s; /* Firefox */
     -webkit-animation: fadein 3s; /* Safari and Chrome */
@@ -91,17 +89,11 @@ html {
     overflow: visible;
 }
 
-.col-sm-12 {
-    padding: 50px 10px;
-}
-
 .button {
     background-color: black;
     border: none;
     color: white;
-    padding: 16px 32px;
     text-align: center;
-    margin: 4px 2px;
     opacity: 0.6;
     transition: 0.3s;
     display: inline-block;
@@ -114,19 +106,16 @@ html {
     color: white;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        /* background-color: grey; */
-    } 
-}
-
 @media (min-width: 992px) {
     .container {
         /* background-color: yellow; */
     }
     .button {
-        width: 200px;
+        /* width: 200px; */
         font-size: 20px;
+    }
+    h1 {
+        font-size: 60px;
     }
 }
 
@@ -135,10 +124,13 @@ html {
         /* background-color: yellow; */
     }
     .button {
-        width: 400px;
+        /* width: 400px; */
         height: 100px;
         font-size: 50px;
-        margin: 20px;
+        margin: 20px 0px 20px 0px;
+    }
+    h1 {
+        font-size: 100px;
     }
 }
 
@@ -146,11 +138,16 @@ html {
     .container {
         /* background-color: red; */
     }
-
 }
 
 @media (min-width: 576px) {
     .container {
         /* background-color: magenta; */
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        /* background-color: grey; */
     }
 }
